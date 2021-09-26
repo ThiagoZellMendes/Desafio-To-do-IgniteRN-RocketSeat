@@ -41,6 +41,7 @@ export function Home() {
   }
 
   function handleRemoveTask(id: number) {
+    //alerta o usuario e pede para ele confimar a remoção da TASK escolhida.
     Alert.alert(
       "Remover item",
       "Tem certeza que você deseja remover esse item?",
@@ -54,6 +55,20 @@ export function Home() {
     )
   }
 
+  function handleEditTask(taskId: number, taskNewTitle: string) {
+    //Desestrutura o Task sem ferir o principio da imutabilidade.
+    const updatedTaskTitle = tasks.map(task =>({...task}));
+    //busca no array se a Task que quero editar, se encontra no array
+    const searchItem = updatedTaskTitle.find(item => item.id === taskId);
+    
+    if(!searchItem){
+      return;
+    }else{
+      searchItem.title = taskNewTitle
+      setTasks(updatedTaskTitle)
+    }
+  }
+
   return (
     <View style={styles.container}>
       <Header tasksCounter={tasks.length} />
@@ -64,6 +79,7 @@ export function Home() {
         tasks={tasks} 
         toggleTaskDone={handleToggleTaskDone}
         removeTask={handleRemoveTask} 
+        editTask={handleEditTask}
       />
     </View>
   )
