@@ -1,5 +1,5 @@
 <h4 align="center"> 
-	🚧 "My Skills" 🚀 App para fixação de aprendizado em React-Native 🚧
+	🚧 "To-do(lista de tarefas)" 🚀 App para fixação de aprendizado em React-Native 🚧
 </h4>
 
 <p align="center">
