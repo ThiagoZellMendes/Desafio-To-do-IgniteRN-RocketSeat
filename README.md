@@ -36,7 +36,7 @@
 ## 🎨 Layout
 
 <p align="center">
-  <img alt="MySkills" title="#MySkills" src="./src/assets/images/logo/telaInicial.PNG" width="200px">
+  <img alt="MySkills" title="#MySkills" src="./src/assets/images/logo/telaInicial.PNG" width="350px">
 </p>
 
 
